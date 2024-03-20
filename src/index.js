@@ -9,7 +9,7 @@ import { App } from "components/App";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/service-auto-rental-new1">
+    <BrowserRouter basename="/nanny_services">
       <App />
       <GlobalStyle />
     </BrowserRouter>
