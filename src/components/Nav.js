@@ -1,6 +1,12 @@
+import React, { useState } from 'react';
+import ModalLogin from './authorized/ModalLogin';
+import ModalRegistration from './authorized/ModalRegistration';
 import { Link, NavBlock } from './Nav.styled';
 
 export const Nav = () => {
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showRegistrationModal, setShowRegistrationModal] = useState(false);
+
   return (
     <nav>
       <NavBlock>
@@ -8,12 +14,20 @@ export const Nav = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/catalog">Catalog</Link>
+          <Link to="/catalog">Nannies</Link>
         </li>
-        <li>
-          <Link to="/favorite">Favorites</Link>
-        </li>
+        
       </NavBlock>
+      {showLoginModal && (
+        <ModalLogin handleClose={() => setShowLoginModal(false)} />
+      )}
+      {showRegistrationModal && (
+        <ModalRegistration
+          handleClose={() => setShowRegistrationModal(false)}
+        />
+      )}
     </nav>
   );
 };
+
+export default Nav;
