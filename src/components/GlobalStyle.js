@@ -4,14 +4,21 @@ import 'modern-normalize';
 export const GlobalStyle = createGlobalStyle`
 
   :root {
+--ns-background-color: #F03F3B;
+--ns-button-background-color: #F03F3B;
+--ns-text-color: #FBFBFB;
+
   --pr-background-color: #ffffff;
   --pr-text-color: #8a8a89;
-  --pr-text-color: #121417;
+  
   --pr-input-background-color: #f7f7fb;
-  --pr-button-background-color: #3470ff;
+  
   --hovered-button-background-color: #0b44cd;
-  --font-family: "Manrope", sans-serif;
+  /* --font-family: "Manrope", sans-serif; */
   --second-family: "Inter", sans-serif;
+  :root {
+  --font-family: "Helvetica Neue", sans-serif;
+}
 }
 
   body {

@@ -1,15 +1,30 @@
-import { ArticleHomePage, DivTitle } from './HomePage.styled';
+
+
+import {
+  WelcomeTitle,
+  ArticleHomePage,
+  DivTitleBlock,
+  DivTitle,
+  BlockTitle,
+  BlockText,
+  HomeBlockButton,
+} from './HomePage.styled';
 
 const HomePage = () => {
   return (
-    <>
-      <ArticleHomePage>
+    <WelcomeTitle>
+      <DivTitleBlock>
         <DivTitle>
-          Welcome <br /> Auto Rental Service
+          <BlockTitle>Make Life Easier for the Family:</BlockTitle>
+
+          <BlockText>Find Babysitters Online for All Occasions</BlockText>
+          <HomeBlockButton to="/catalog">
+            Get started
+          </HomeBlockButton>
         </DivTitle>
-        
-      </ArticleHomePage>
-    </>
+      </DivTitleBlock>
+      <ArticleHomePage></ArticleHomePage>
+    </WelcomeTitle>
   );
 };
 

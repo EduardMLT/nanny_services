@@ -11,12 +11,15 @@ export const Nav = () => {
     <nav>
       <NavBlock>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" activeClassName="active">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/catalog">Nannies</Link>
+          <Link to="/catalog" activeClassName="active">
+            Nannies
+          </Link>
         </li>
-        
       </NavBlock>
       {showLoginModal && (
         <ModalLogin handleClose={() => setShowLoginModal(false)} />

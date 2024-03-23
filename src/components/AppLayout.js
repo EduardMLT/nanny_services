@@ -10,6 +10,7 @@ import ModalRegistration from './authorized/ModalRegistration';
 import { Loader } from './LoaderSpinner/LoaderSpinner';
 import {
   Container,
+Main,
   Header,
   Logo,
   WrapLogo,
@@ -39,28 +40,33 @@ export const AppLayout = () => {
 
   return (
     <Container>
-      <Header>
-        <WrapLogo>
-          <Logo>Nanny.Services</Logo>
-        </WrapLogo>
-        <Nav />
-        <nav>
-          <NavBlock>
-            <li>
-              <NavBlockButton onClick={handleLoginClick}>Login</NavBlockButton>
-            </li>
-            <li>
-              <NavBlockButton onClick={handleRegistrationClick}>Registration</NavBlockButton>
-            </li>
-          </NavBlock>
-        </nav>
-      </Header>
+      {/* <Main> */}
+        <Header>
+          <WrapLogo>
+            <Logo>Nanny.Services</Logo>
+          </WrapLogo>
+          <Nav />
+          <nav>
+            <NavBlock>
+              <li>
+                <NavBlockButton onClick={handleLoginClick}>
+                  Login
+                </NavBlockButton>
+              </li>
+              <li>
+                <NavBlockButton onClick={handleRegistrationClick}>
+                  Registration
+                </NavBlockButton>
+              </li>
+            </NavBlock>
+          </nav>
+        </Header>
+      {/* </Main> */}
 
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
 
-     
       <ModalContainer
         isOpen={showLoginModal}
         handleClose={handleLoginModalClose}
@@ -68,7 +74,6 @@ export const AppLayout = () => {
         <ModalLogin />
       </ModalContainer>
 
-      
       <ModalContainer
         isOpen={showRegistrationModal}
         handleClose={handleRegistrationModalClose}

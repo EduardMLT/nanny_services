@@ -1,30 +1,43 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 1216px;
+  max-width: 1440px;
+  height: 800px;
+  background-color: transparent;
+  padding: 32px;  
+  margin: 0 auto;  
+`;
+
+export const Main = styled.div`  
+  background-color: var(--ns-background-color);
   margin: 0 auto;
-  padding: 0 16px;
 `;
 
 export const Header = styled.header`
-  background: var(--pr-button-background-color);
+  width: 1184px;
+  margin-top: 20px;
+  margin-left: 96px;
+  /* background: var(--ns-background-color); */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  /* gap: 12px;
   padding: 8px 0;
   padding-right: 16px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid black;
+  margin-bottom: 16px; */
+  /* border-bottom: 1px solid black; */
 `;
 
 export const WrapLogo = styled.div`
-  width: 100%;
+  /* width: 100%; */
 `;
 
 export const Logo = styled.p`
-  font-family: inherit;  
-  color: var(--pr-background-color);
+  width: 164px;
+  height: 28px;
+  font-family: inherit;
+  color: var(--ns-text-color);
+  /* background-color: transparent; */
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -32,8 +45,8 @@ export const Logo = styled.p`
   transition: color 0.5s ease-in-out;
   text-transform: uppercase;
   font-weight: 900;
-  margin: 0;
-  margin-left: 96px;
+  margin-right: 487px;
+  /* margin-left: 96px; */
   justify-content: flex-start;
 
   &:hover {
@@ -47,14 +60,25 @@ export const NavBlock = styled.ul`
 `;
 
 export const NavBlockButton = styled.button`
-  padding: 8px 16px;
-  border-radius: 4px;
+  /* padding: 8px 16px;
+  border-radius: 4px; */
+  border-radius: 30px;
+  padding: 14px 40px;
+  /* width: 168px;
+  height: 48px; */
+  margin-right: 8px;
   text-decoration: none;
-  color: black;
+  color: var(--ns-text-color);
   font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
 
-  &.active {
-    color: white;
-    background-color: var(--hovered-button-background-color);
+  &:active {
+    background-color: var(--ns-button-background-color);
+  }
+
+  &:hover {
+    border: 1px solid rgba(251, 251, 251, 0.4);
   }
 `;
