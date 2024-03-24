@@ -10,7 +10,6 @@ import ModalRegistration from './authorized/ModalRegistration';
 import { Loader } from './LoaderSpinner/LoaderSpinner';
 import {
   Container,
-Main,
   Header,
   Logo,
   WrapLogo,
@@ -40,7 +39,7 @@ export const AppLayout = () => {
 
   return (
     <Container>
-      {/* <Main> */}
+      
         <Header>
           <WrapLogo>
             <Logo>Nanny.Services</Logo>
@@ -61,7 +60,7 @@ export const AppLayout = () => {
             </NavBlock>
           </nav>
         </Header>
-      {/* </Main> */}
+      
 
       <Suspense fallback={<Loader />}>
         <Outlet />

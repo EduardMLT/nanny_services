@@ -5,7 +5,7 @@ import banner from '../../img/Rectangle_1.png';
 
 export const WelcomeTitle = styled.div`
   width: 1376px;
-  height: 736px;  
+  /* height: 736px;   */
   background: transparent;
 `;
 
@@ -17,7 +17,7 @@ export const ArticleHomePage = styled.div`
   background-size: cover;
   top: 32px;
   right: 32px;
-  z-index: -20;
+  /* z-index: -20; */
   position: absolute;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -26,13 +26,13 @@ export const ArticleHomePage = styled.div`
 export const DivTitleBlock = styled.div`
   position: absolute;
   bottom: 0;  
-  text-shadow: 4px 3px 0 var(--pr-button-background-color);
+  /* text-shadow: 4px 3px 0 var(--pr-button-background-color); */
   width: 50%;
   height: 100%;
   background: var(--ns-background-color);  
   top: 32px;
   left: 32px;
-  z-index: -20;
+  /* z-index: -1; */
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 `;
@@ -43,7 +43,7 @@ export const DivTitle = styled.div`
   margin-top: 251px;
   margin-left: 96px;
 
-  border: 1px solid rgba(251, 251, 251, 0.4);
+  /* border: 1px solid rgba(251, 251, 251, 0.4); */
 `;
 
 export const BlockTitle = styled.span`
@@ -78,5 +78,5 @@ export const HomeBlockButton = styled(Link)`
   font-size: 20px;
   line-height: 120%;
   letter-spacing: -0.01em;
-  cursor: pointer;
+  /* cursor: pointer; */
 `;

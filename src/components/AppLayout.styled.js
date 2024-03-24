@@ -2,30 +2,24 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   max-width: 1440px;
-  height: 800px;
+  /* height: 800px; */
   background-color: transparent;
   padding: 32px;  
   margin: 0 auto;  
 `;
 
-export const Main = styled.div`  
-  background-color: var(--ns-background-color);
-  margin: 0 auto;
-`;
-
 export const Header = styled.header`
   width: 1184px;
-  margin-top: 20px;
+  /* margin-top: 52px; */
   margin-left: 96px;
-  /* background: var(--ns-background-color); */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 12px;
-  padding: 8px 0;
-  padding-right: 16px;
-  margin-bottom: 16px; */
-  /* border-bottom: 1px solid black; */
+  position: fixed; /* Зафіксувати хедер */
+  top: 52px; /* Прикріпити його зверху */
+  left: 0;
+  right: 0;
+  z-index: 999;
 `;
 
 export const WrapLogo = styled.div`
@@ -37,7 +31,7 @@ export const Logo = styled.p`
   height: 28px;
   font-family: inherit;
   color: var(--ns-text-color);
-  /* background-color: transparent; */
+  
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -46,7 +40,7 @@ export const Logo = styled.p`
   text-transform: uppercase;
   font-weight: 900;
   margin-right: 487px;
-  /* margin-left: 96px; */
+  
   justify-content: flex-start;
 
   &:hover {
@@ -60,12 +54,10 @@ export const NavBlock = styled.ul`
 `;
 
 export const NavBlockButton = styled.button`
-  /* padding: 8px 16px;
-  border-radius: 4px; */
+  
   border-radius: 30px;
   padding: 14px 40px;
-  /* width: 168px;
-  height: 48px; */
+  
   margin-right: 8px;
   text-decoration: none;
   color: var(--ns-text-color);
