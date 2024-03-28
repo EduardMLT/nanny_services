@@ -9,16 +9,30 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-  width: 1184px;
-  /* margin-top: 52px; */
+  width: 1184px;  
   margin-left: 96px;
+  display: flex;
+  /* align-items: center;
+  justify-content: space-between; */
+  position: fixed; /* Fixed heder */
+  top: 52px; 
+  left: 0;
+   z-index: 999;
+   
+`;
+
+export const ContentHeader = styled.div`
+  width: 1184px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-left: 96px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed; /* Зафіксувати хедер */
-  top: 52px; /* Прикріпити його зверху */
+  position: fixed; /* Fixed heder */
+  top: 52px;
   left: 0;
-  right: 0;
   z-index: 999;
 `;
 

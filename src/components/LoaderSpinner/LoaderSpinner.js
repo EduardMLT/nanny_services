@@ -13,9 +13,9 @@ export const Loader = () => {
         wrapperClass=""
         visible={true}
         ariaLabel="three-circles-rotating"
-        outerCircleColor="var(--hovered-button-background-color)"
-        innerCircleColor="var(--pr-button-background-color)"
-        middleCircleColor="var(--hovered-button-background-color)"
+        outerCircleColor="var(--ns-background-color)"
+        innerCircleColor="var(--ns-second-background-color)"
+        middleCircleColor="var(--ns-third-background-color)"
       />
     </LoaderDiv>
   );

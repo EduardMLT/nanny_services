@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 import Select from 'react-select';
 
+export const ContentHeader = styled.div`
+  width: 1184px;
+  margin-left: 96px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--ns-button-background-color);
+`;
+
 export const FilterDiv = styled.div`
   display: flex;
   justify-content: center;

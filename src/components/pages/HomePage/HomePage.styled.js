@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import banner from '../../img/Rectangle_1.png';
 
@@ -25,14 +25,12 @@ export const ArticleHomePage = styled.div`
 
 export const DivTitleBlock = styled.div`
   position: absolute;
-  bottom: 0;  
-  /* text-shadow: 4px 3px 0 var(--pr-button-background-color); */
+  bottom: 0;    
   width: 50%;
   height: 100%;
   background: var(--ns-background-color);  
   top: 32px;
-  left: 32px;
-  /* z-index: -1; */
+  left: 32px;  
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 `;
@@ -41,9 +39,7 @@ export const DivTitle = styled.div`
   width: 517px;
   height: 322px;
   margin-top: 251px;
-  margin-left: 96px;
-
-  /* border: 1px solid rgba(251, 251, 251, 0.4); */
+  margin-left: 96px;  
 `;
 
 export const BlockTitle = styled.span`

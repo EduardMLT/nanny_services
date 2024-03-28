@@ -11,6 +11,7 @@ import { Loader } from './LoaderSpinner/LoaderSpinner';
 import {
   Container,
   Header,
+  ContentHeader,
   Logo,
   WrapLogo,
   NavBlock,
@@ -39,8 +40,8 @@ export const AppLayout = () => {
 
   return (
     <Container>
-      
-        <Header>
+      <Header>
+        <ContentHeader>
           <WrapLogo>
             <Logo>Nanny.Services</Logo>
           </WrapLogo>
@@ -59,8 +60,8 @@ export const AppLayout = () => {
               </li>
             </NavBlock>
           </nav>
-        </Header>
-      
+        </ContentHeader>
+      </Header>
 
       <Suspense fallback={<Loader />}>
         <Outlet />

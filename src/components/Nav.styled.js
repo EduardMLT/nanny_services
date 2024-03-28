@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
   padding: 0px 10px;
-  border-radius: 8px;  
+  border-radius: 8px;
   color: var(--ns-text-color);
   font-weight: 500;
   position: relative;
@@ -28,6 +28,7 @@ export const Link = styled(NavLink)`
 
   &.active::after {
     display: block;
+  }
 `;
 
 export const NavBlock = styled.ul`

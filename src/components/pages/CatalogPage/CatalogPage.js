@@ -6,6 +6,7 @@ import { Loader } from '../../LoaderSpinner/LoaderSpinner';
 import Modal from '../../../components/Modal/Modal';
 
 import {
+  ContentHeader,
   FilterDiv,
   LabelBrand,
   LabelBrandDiv,
@@ -26,7 +27,40 @@ import {
   CatalogPageButton,
 } from './CatalogPage.styled';
 
+import {  
+  
+  Logo,
+  WrapLogo,
+  NavBlock,
+  NavBlockButton,
+} from '../../AppLayout.styled';
+
+import { Nav } from '../../Nav';
+
+import ModalContainer from '../../Modal/ModalContainer';
+import ModalLogin from '../../authorized/ModalLogin';
+import ModalRegistration from '../../authorized/ModalRegistration';
+
 const CatalogPage = ({ favorites, setFavorites }) => {  
+
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showRegistrationModal, setShowRegistrationModal] = useState(false);
+
+  const handleLoginClick = () => {
+    setShowLoginModal(true);
+  };
+
+  const handleRegistrationClick = () => {
+    setShowRegistrationModal(true);
+  };
+
+  const handleLoginModalClose = () => {
+    setShowLoginModal(false);
+  };
+
+  const handleRegistrationModalClose = () => {
+    setShowRegistrationModal(false);
+  };
 
   const [trends, setTrends] = useState([]);
   const [loader, setLoader] = useState(false);
@@ -40,7 +74,7 @@ const CatalogPage = ({ favorites, setFavorites }) => {
     price: '',
     minMileage: null,
     maxMileage: null,
-    perPage: 12,
+    perPage: 4,
   });
   
   const [minMileageError, setMinMileageError] = useState('');
@@ -237,14 +271,42 @@ const [inputWidth, setInputWidth] = useState(0);
     setInputWidth(e.target.value.length * 1.8 + 20);
   };  
 
-
-// const formattedMinMileage = new Intl.NumberFormat('en-US').format(
-//   parseInt(filters.minMileage, 10)
-// );
-
   return (
     <>
       {loader && <Loader />}
+
+      <ContentHeader>
+        <WrapLogo>
+          <Logo>Nanny.Services</Logo>
+        </WrapLogo>
+        <Nav />
+        <nav>
+          <NavBlock>
+            <li>
+              <NavBlockButton onClick={handleLoginClick}>Login</NavBlockButton>
+            </li>
+            <li>
+              <NavBlockButton onClick={handleRegistrationClick}>
+                Registration
+              </NavBlockButton>
+            </li>
+          </NavBlock>
+        </nav>
+      </ContentHeader>
+
+      <ModalContainer
+        isOpen={showLoginModal}
+        handleClose={handleLoginModalClose}
+      >
+        <ModalLogin />
+      </ModalContainer>
+
+      <ModalContainer
+        isOpen={showRegistrationModal}
+        handleClose={handleRegistrationModalClose}
+      >
+        <ModalRegistration />
+      </ModalContainer>
 
       <FilterDiv>
         <LabelBrandDiv>

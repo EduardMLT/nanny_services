@@ -5,6 +5,9 @@ export const GlobalStyle = createGlobalStyle`
 
   :root {
 --ns-background-color: #F03F3B;
+--ns-second-background-color: #0957C3;
+--ns-third-background-color: #103931;
+
 --ns-button-background-color: #F03F3B;
 --ns-text-color: #FBFBFB;
 
